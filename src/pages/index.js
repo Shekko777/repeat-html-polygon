@@ -1,11 +1,12 @@
 // Переменные
 const editPopup = document.querySelector('.popup_type_edit'); // Попап редактирования
-const editNameInput = editPopup.querySelector('.popup__input_place_title'); // Поле имени в попа
-const editDescriptionInput = editPopup.querySelector('.popup__input_place_subtitle'); // Поле описани в попе
-const openEditButton = document.querySelector('.profile__edit-btn'); // Кнопка редактирования попа
+const editNameInput = editPopup.querySelector('.popup__input_place_title'); // Поле имени в попапе
+const editDescriptionInput = editPopup.querySelector('.popup__input_place_subtitle'); // Поле описания в попапе
+const openEditButton = document.querySelector('.profile__edit-btn'); // Кнопка редактирования попапа
 const closeEditButton = editPopup.querySelector('.popup__close'); // Крестик в попапе редактирования
 const profileName = document.querySelector('.profile__title'); // Имя профиля
 const profileDescription = document.querySelector('.profile__subtitle'); // Описание профиля
+const form = document.querySelector(".popup__form_type_edit");
 
 // Функции
 function handleOpenPopup() { // Открываем попап
@@ -14,10 +15,9 @@ function handleOpenPopup() { // Открываем попап
   editDescriptionInput.value = profileDescription.textContent;
 }
 
-function handleClosePopup() { // Закрываем попа
+function handleClosePopup() { // Закрываем попап
   editPopup.classList.remove("popup_opened");
-  editNameInput.value = '';
-  editDescriptionInput.value = '';
+  form.reset();
 }
 
 function handleSubmitEditPopup(evt) { // Отправка формы попапа
