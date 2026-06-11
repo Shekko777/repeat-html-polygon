@@ -92,7 +92,7 @@ closeEditButton.addEventListener('click', handleEditClosePopup);
 editPopup.addEventListener('submit', handleSubmitEditPopup);
 
 // add form
-openAddCardForm.addEventListener('click', () => {handleOpenPopup(addCardPopup)});
+openAddCardForm.addEventListener('click', () => handleOpenPopup(addCardPopup));
 closeAddCardButton.addEventListener('click', handleAddCardClosePopup);
 addCardPopup.addEventListener('submit', handleSubmitAddCardPopup);
 
